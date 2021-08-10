@@ -1,8 +1,22 @@
 body {
-  /* background-image: url("images/shane-rounce-landing-med.jpg");
-  background-size: cover; */
-  background: url("images/shane-rounce-landing-med.jpg") no-repeat center fixed;
-  background-size: cover;
+  margin: 0;
+}
+button {
+  border: none;
+}
+input {
+  border: none;
+  font-family: Oswald, sans-serif;
+  margin-top: 5px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+h4 {
+  font-family: Oswald;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
 }
 
 label {
@@ -14,173 +28,149 @@ label {
 }
 
 /* Buttons */
-.book-btn, .search-btn {
-  /*the 'Book' and 'Search' buttons*/
-  background-color: black;
-  border-radius: 25px;
-  color: white;
+.book-btn,
+.search-btn,
+.tour-btn {
   display: inline-block;
   font-family: Oswald, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
   letter-spacing: 1px;
   margin-left: auto;
-  padding: 5px 25px;
-}
-.book-btn:hover {
-  color: #C0B018;
+  padding: 5px 25px 7px;
 }
 .search-btn {
-  background-color: #C0B018;
+  background-color: #A7C09B;
+  color: white;
+  margin-top: 20px;
 }
 .search-btn:hover {
-  color: black;
+  background-color: #C7C9D1;
+  color: #334147;
+  cursor: pointer;
+}
+.tour-btn {
+  background-color: #334147;
+  color: white;
+  cursor: pointer;
+  margin: 5px 0;
+}
+.tour-btn:hover {
+  background-color: #A7C09B;
+  color: white;
+}
+
+.book-btn {
+  background-color: #A7C09B;
+  color: white;
+  cursor: pointer;
+  margin: 5px 0;
+}
+.book-btn {
+  background-color: #334147;
+}
+.book-btn:hover {
+  background-color: #A7C09B;
+  color: white;
+}
+.drop-btn {
+  font-family: Oswald, sans-serif;
+  margin-top: 5px;
+  padding: 5px;
 }
 
 /*Navbar*/
 .navigation {
-  background-color: black;
-  background-color: rgba(0, 0, 0, .2);
-}
-.navigation-container {
-  /*the nav surrounding the nav bar*/
   align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+
+.logo-div {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.logo {
+  /*the Cycle Hostel logo in Navbar*/
+  color: white;
+  font-size: 1.5rem;
+}
+
+.logo-2 {
+  color: white;
+  font-family: Oswald;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding-right: 5px;
+}
+
+.navbar-links {
   display: flex;
   justify-content: center;
 }
-.logo {
-  /*the Cycle Hostel logo in Navbar*/
-  display: inline-block;
+.navbar-links li{
   color: white;
-  font-family: Montserrat, sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  padding-top: 10px;
-  /*to align with Book Now button*/
-}
-
-/*the Hero Background Image*/
-.bg {
-  /* background-image: url("images/shane-rounce-landing-med.jpg");
-  background-position: 0 0;
-  background-repeat: repeat-x;
-  background-size: cover; */
-}
-
-/*Hero Content*/
-.hero-container, .footer {
-  /*container for all content excluding navbar*/
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 50px;
-  text-align: left;
-  width: 100%;
-}
-.hero-container {
-  padding-top: 100px;
-}
-
-.pageTitle {
-  /*Cycle Hostel h1 title*/
-  color: white;
-  display: inline-block;
-  font-family: American Captain;
-  font-size: 5rem;
-  letter-spacing: 2px;
-  /* box-shadow: */
-}
-
-.pageTitle:hover {
-  color: #C0B018;
-  cursor: pointer;
-}
-
-.tagline-text1, .tagline-text2 {
-  /*text below title heading*/
-  color: white;
-  font-family: Oswald;
-  font-size: 2.5rem;
-  font-weight: bolder;
-  letter-spacing: 2px;
-}
-
-.tagline-text2 {
-  padding-top: 20px;
-  font-size: 2.5rem;
-}
-
-/*Forms*/
-/* Container for dropBtn, dropdown-content, and labels */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  padding-right: 20px;
-}
-
-/* Container for dropdown a links */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #C0B018;
-  min-width: 160px;
-  z-index: 1;
-}
-
-/* Styles for the links inside dropdown */
-.dropdown-content a {
-  color: black;
-  display: block;
   font-family: Oswald, sans-serif;
-  padding: 12px 16px;
-  text-align: center;
-  text-decoration: none;
+  font-size: .8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  list-style-type: none;
+  opacity: .8;
+  padding-right: 50px;
 }
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  border-radius: 25px;
-  display: block;
-  text-align: center;
-}
-
-/* Changing the styles of the dropdown links on hover */
-.dropdown-item:hover {
+.nav-link-effect {
+  cursor: pointer;
   text-decoration: underline;
 }
 
-/* Styling for all Buttons in form */
-.form-control, .dropBtn {
-  border-radius: 25px;
-  color: grey;
-  text-align: left;
-  width: 200px;
-}
-
-/* Arrival and Departure Button Styling */
-.form-group {
-  display: inline-block;
-  padding: 20px 20px 40px 0;
-  /*no left padding to keep left aligned with above text*/
-}
-
-/* Divider between forms and footer */
-.divider {
-  background-color: white;
-  height: 10px;
+/*Hero Content*/
+/*the Hero Background Image*/
+.Hero {
+  background: url("images/shane-rounce-landing-med1.jpg") no-repeat center fixed;
+  background-size: cover;
+  border-bottom: 10px solid white;
   width: 100%;
-  visibility: hidden;
 }
 
-/* Footer */
+.hero-text-container {
+  text-align: center;
+}
 
-.footer {
-  position: absolute;
-  bottom: 0;
+.hero-title {
+  color: #A7C09B;
+  display: inline-block;
+  font-family: American Captain;
+  font-size: 7rem;
+  letter-spacing: 2px;
+  margin: 60px 0 10px;
+}
+
+.hero-title:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.tagline-text1 {
+  color: white;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+
+/* Social */
+.social {
+  /* position: absolute;
+  bottom: 0; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;;
+  padding: 10px 50px 20px;
+  ;
 }
+
 .fab {
   color: lightgrey;
   font-size: 1.5rem;
@@ -189,7 +179,7 @@ label {
 
 .fab:hover {
   cursor: pointer;
-  color: #C0B018;
+  color: white;
 }
 
 .phone1 {
@@ -218,15 +208,154 @@ label {
   color: lightgrey;
   display: block;
   font-size: 2rem;
-  padding-right: 40px;
   padding-top: 20px;
-  right: 0;
+}
+.social-icons i:hover {
+  color: #A7C09B;
+  font-size: 2.5rem;
+}
+
+.social-icons i {
+  color: white;
+}
+
+/*Amenities Section */
+.amenities-heading,
+.amenities-text,
+.amenities-subheadings,
+.bookings-heading {
+  color: #334147;
+  font-family: Oswald, sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.amenities-subheadings {
+  font-weight: 600;
+}
+.amenities-item {
+  text-align: center;
+}
+.amenities-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+.amenities-icons {
+  color:  #334147;
+  font-size: 2.5rem;
+}
+.amenities-text {
+font-size: 1rem;
+opacity: .8;
+}
+
+
+/*Bookings*/
+.bookings {
+  background-color: #334147;
+  border-bottom: 10px solid white;
+}
+.bookings-heading {
+  color: #A7C09B;
+  font-size: 1.5rem;
+  text-align: left;
+}
+.booking-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 50px;
+}
+.upper-booking-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Contact-Footer */
+.contact-footer {
+  align-items: center;
+  background-color: #A7C09B;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+.contact-item p {
+  color: #334147;
+  font-family: Oswald, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.contact-item i {
+  color: white;
+}
+.contact-item i:hover {
+  color: #334147;
+}
+.contact-item span {
+  color: #334147;
+  font-size: .8rem;
+}
+
+
+/* Container for drop-btn, dropdown-content, and labels */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  letter-spacing: 5px;
+  padding: 5px 20px 0 0;
+}
+
+/* Container for dropdown a links */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #C7C9D1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Styles for the links inside dropdown */
+.dropdown-content a {
+  color: black;
+  display: block;
+  font-family: Oswald, sans-serif;
+  padding: 12px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  text-align: center;
+}
+
+/* Changing the styles of the dropdown links on hover */
+.dropdown-item:hover {
+  background-color: white;
+  text-decoration: underline;
+}
+
+/* Styling for all Buttons in form */
+.form-control, .drop-btn {
+  border-radius: 25px;
+  color: grey;
+  text-align: left;
+  width: 200px;
+}
+
+/* Arrival and Departure Button Styling */
+.form-group {
+  display: inline-block;
+  padding: 5px 0;
+  /*no left padding to keep left aligned with above text*/
 }
 
 /* Animations */
-
-
 /* Media Queries */
-@media screen and (max-width: 990px) and (min-width: 760px) {
-
-}
+@media screen and (max-width: 990px) and (min-width: 760px) {}

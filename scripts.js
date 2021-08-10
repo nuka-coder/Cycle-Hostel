@@ -8,6 +8,16 @@ $(document).on("load", function() {
 })
 //Button Effects
 $(".book-btn").on("click", function() {
-  $(this).css("background-color", "#C0B018").slideUp(200).slideDown(300);
+  $(this).css("background-color", "#334147").slideUp(200).slideDown(300);
+  $(this).css("color", "white");
+})
+
+//Navbar Links Effects
+$(".nav-link").on("mouseover", function() {
+  $(this).addClass("nav-link-effect");
+  $(this).css("color", "#334147");
+})
+$(".nav-link").on("mouseout", function() {
+  $(this).removeClass("nav-link-effect");
   $(this).css("color", "white");
 })
