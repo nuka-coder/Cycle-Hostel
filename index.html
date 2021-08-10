@@ -20,23 +20,23 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <!--CSS Stylesheet-->
   <link rel="stylesheet" href="styles.css">
-  <!-- JQuery Scripts -->
-    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Javascript Scripts -->
+  <script defer src="scripts.js" charset="utf-8"></script>
 </head>
 
 <body>
-  <!-- Navigation Bar and Book Button -->
-  <header>
-    <nav class="navigation navbar navbar-expand-lg bg-light fixed-top bg-transparent">
+  <!-- Navigation Bar -->
+  <header id="header">
+    <nav class="navigation navbar navbar-expand-lg fixed-top">
 
-      <div class="container" id="header">
+      <div class="container navigation-container">
 
         <div>
-          <h3 class="navbar-brand logoHead">Cycle Hostel</h3>
+          <h3 class="navbar-brand logo">Cycle Hostel</h3>
         </div>
 
         <div>
-          <button class="btn pageBtn1 ml-auto" type="button" name="button">Book Now</button>
+          <button class="btn book-btn ml-auto" type="button" name="button">Book Now</button>
         </div>
 
       </div>
@@ -44,20 +44,21 @@
 
 
   </header>
-                          <!-- Main Bg Image and all page content -->
+  <!-- Main Bg Image and all page content -->
   <div class="bg">
-    <div class="main-content-container container">
+
+    <div class="hero-container container">
       <h1 class="pageTitle">Cycle Hostel</h1>
       <h3 class="tagline-text1">adventure is out there,<br>comfort is in here.</h3>
-      <h4 class="tagline-text2" style="color:#C0B018">Let us be your next crash spot.</h4>
+      <h4 class="tagline-text2" style="color:#C0B018">let us be your next crash spot.</h4>
       <form class="form-container pt-5" action="index.html" method="get">
 
-<!-- Destination Button Dropdown -->
+        <!-- Destination Button Dropdown -->
         <div class="dropdown">
           <label for="destinationLabel">Destination</label> <br>
           <button class="btn btn-light dropBtn">Our Locations</button>
 
-<!--contents of the Destination dropdown button-->
+          <!--contents of the Destination dropdown button-->
           <div class="dropdown-content" aria-expanded="true">
             <a class="dropdown-item" href="#">Detroit, MI, USA</a>
             <a class="dropdown-item" href="#">Toronto, ON, CA</a>
@@ -92,16 +93,15 @@
         </div>
 
         <!-- Search Beds Button -->
-        <button class="btn pageBtn2">Search Beds</button>
+        <button class="btn search-btn">Search Beds</button>
 
       </form>
-    </div>
-
-    <div class="divider mt-5"></div>
 
     <footer class="footer container">
-      <p class="phone1">1+/</p>
-      <p class="phone2">555 <br>555 <br>0711 </p>
+      <div>
+        <p class="phone1">1+/</p>
+        <p class="phone2">555 <br>555 <br>0711 </p>
+      </div>
 
       <div class="social-icons">
         <i class="fab fa-youtube"></i>
@@ -109,14 +109,14 @@
         <i class="fab fa-facebook-square"></i>
       </div>
     </footer>
-  </div> <!--End og Bg image container -->
+  <!--End of Bg image container -->
 
 
 
 
 
-
-<script src="scripts.js" charset="utf-8"></script>
+  <!-- JQuery Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 
 </html>

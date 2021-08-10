@@ -1,6 +1,8 @@
-body, html {
-  height: 100%;
-  /*fully size the background image*/
+body {
+  /* background-image: url("images/shane-rounce-landing-med.jpg");
+  background-size: cover; */
+  background: url("images/shane-rounce-landing-med.jpg") no-repeat center fixed;
+  background-size: cover;
 }
 
 label {
@@ -11,16 +13,9 @@ label {
   letter-spacing: 1px;
 }
 
-/*Header*/
-#header {
-  /*the div surrounding the nav bar*/
-  align-items: center;
-  display: flex;
-  padding: 20px;
-}
-
-.pageBtn1, .pageBtn2 {
-  /*the 'Book Now' button*/
+/* Buttons */
+.book-btn, .search-btn {
+  /*the 'Book' and 'Search' buttons*/
   background-color: black;
   border-radius: 25px;
   color: white;
@@ -31,52 +26,58 @@ label {
   margin-left: auto;
   padding: 5px 25px;
 }
-
-.pageBtn1:hover {
+.book-btn:hover {
   color: #C0B018;
-  font-size: 1.17rem;
+}
+.search-btn {
+  background-color: #C0B018;
+}
+.search-btn:hover {
+  color: black;
 }
 
-.logoHead {
+/*Navbar*/
+.navigation {
+  background-color: black;
+  background-color: rgba(0, 0, 0, .2);
+}
+.navigation-container {
+  /*the nav surrounding the nav bar*/
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.logo {
   /*the Cycle Hostel logo in Navbar*/
   display: inline-block;
   color: white;
   font-family: Montserrat, sans-serif;
-  font-size: 1.25rem;
-  font-weight: 800;
-  padding-top: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-top: 10px;
   /*to align with Book Now button*/
 }
 
-/*Bg Image*/
+/*the Hero Background Image*/
 .bg {
-  /*the Main Background Image*/
-  background-image: url("images/landing-img.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  z-index: 0;
+  /* background-image: url("images/shane-rounce-landing-med.jpg");
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: cover; */
 }
 
-/*Main Body*/
-.main-content-container, .footer {
+/*Hero Content*/
+.hero-container, .footer {
   /*container for all content excluding navbar*/
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 150px;
-  /*keeps main contianer from being hidden behind navbar*/
+  padding-top: 50px;
   text-align: left;
   width: 100%;
 }
-
-.pageBtn2 {
-  background-color: #C0B018;
-}
-
-.pageBtn2:hover {
-  color: black;
+.hero-container {
+  padding-top: 100px;
 }
 
 .pageTitle {
@@ -84,26 +85,27 @@ label {
   color: white;
   display: inline-block;
   font-family: American Captain;
-  font-size: 10rem;
+  font-size: 5rem;
+  letter-spacing: 2px;
+  /* box-shadow: */
 }
 
 .pageTitle:hover {
   color: #C0B018;
   cursor: pointer;
-  font-size: 10.17rem;
 }
 
 .tagline-text1, .tagline-text2 {
   /*text below title heading*/
   color: white;
   font-family: Oswald;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bolder;
   letter-spacing: 2px;
 }
 
 .tagline-text2 {
-  padding-top: 40px;
+  padding-top: 20px;
   font-size: 2.5rem;
 }
 
@@ -170,6 +172,15 @@ label {
 }
 
 /* Footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;;
+}
 .fab {
   color: lightgrey;
   font-size: 1.5rem;
@@ -178,11 +189,7 @@ label {
 
 .fab:hover {
   cursor: pointer;
-}
-
-.footer {
-  padding: 0 0 0 20px;
-  position: relative;
+  color: #C0B018;
 }
 
 .phone1 {
@@ -190,7 +197,7 @@ label {
   color: white;
   display: inline-block;
   font-family: Montserrat, sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 0;
   padding-top: 20px;
 }
@@ -200,7 +207,7 @@ label {
   color: lightgrey;
   display: inline-block;
   font-family: Montserrat, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
   margin-bottom: 0;
   padding: 20px 0 0 10px;
@@ -208,75 +215,18 @@ label {
 
 .social-icons {
   /*container for the three fab icons*/
-  bottom: 40px;
   color: lightgrey;
   display: block;
   font-size: 2rem;
   padding-right: 40px;
   padding-top: 20px;
-  position: absolute;
   right: 0;
 }
 
 /* Animations */
 
 
-
 /* Media Queries */
 @media screen and (max-width: 990px) and (min-width: 760px) {
-  body, html {
-    background-color: black;
-  }
 
-  .bg {
-    border-bottom: solid 10px white;
-  }
-
-  .footer {
-    background-color: black;
-    margin-top: 100px;
-    padding-top: 0;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  body, html {
-    background-color: black;
-  }
-
-  .bg {
-    border-bottom: solid 10px white;
-  }
-
-  .divider {
-    visibility: visible;
-  }
-
-  .dropdown-content {
-    background-color: #C0B018;
-    color: white;
-  }
-
-  .dropdown-item {
-    background-color: white;
-  }
-
-  .fab {
-    color: white;
-  }
-
-  .form-container {
-    background-color: black;
-    margin-top: 170px;
-  }
-
-  .footer {
-    background-color: black;
-    padding-top: 50px;
-  }
-
-  .pageBtn2 {
-    background-color: #C0B018;
-    color: black;
-  }
 }
