@@ -1,3 +1,7 @@
+:root {
+  --white: #fff;
+  --black: #000;
+}
 body {
   margin: 0;
 }
@@ -92,7 +96,9 @@ label {
   justify-content: center;
   padding-top: 10px;
 }
-
+.navLogo {
+  height: 4em;
+}
 .logo {
   /*the Cycle Hostel logo in Navbar*/
   color: white;
@@ -114,8 +120,8 @@ label {
 .navbar-links li{
   color: white;
   font-family: Oswald, sans-serif;
-  font-size: .8rem;
-  font-weight: bold;
+  font-size: 1em;
+  font-weight: 600;
   letter-spacing: 2px;
   list-style-type: none;
   opacity: .8;
@@ -125,6 +131,49 @@ label {
   cursor: pointer;
   text-decoration: underline;
 }
+
+/* Mobile Navbar */
+.nav {
+  background-color: var(--white);
+  padding: 10px 20px;
+  position: relative;
+}
+.nav-logo {
+  height: 4em;
+  padding: 20px 0;
+}
+.nav-logo-div {
+  text-align: center;
+}
+.nav-links {
+  display: none;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.nav-links a {
+  color: var(--white);
+  display: block;
+  font-size: 1rem;
+  padding: 10px 0;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  background-color: var(--white);
+  color: var(--black);
+  text-decoration: underline;
+}
+.nav-links a:active {
+  background-color: var(--white);
+}
+/* Div for Hamburger Menu Links */
+.links-div {
+  /* this is to keep it center aligned with logo */
+  position: absolute;
+  text-align: right;
+  top: 40px;
+  right: 20px;
+}
+
 
 /*Hero Content*/
 /*the Hero Background Image*/
@@ -220,6 +269,9 @@ label {
 }
 
 /*Amenities Section */
+.amenities-section {
+  padding: 2rem 1.5rem;
+}
 .amenities-heading,
 .amenities-text,
 .amenities-subheadings,
@@ -229,6 +281,9 @@ label {
   font-weight: 400;
   letter-spacing: 2px;
   text-align: center;
+}
+.amenities-heading {
+  font-weight: bold;
 }
 .amenities-subheadings {
   font-weight: 600;
@@ -359,3 +414,9 @@ opacity: .8;
 /* Animations */
 /* Media Queries */
 @media screen and (max-width: 990px) and (min-width: 760px) {}
+
+@media screen and (max-width: 780px) {
+  .amenities-container {
+    flex-wrap: wrap;
+  }
+}
