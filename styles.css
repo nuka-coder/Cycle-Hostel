@@ -2,23 +2,32 @@
   --white: #fff;
   --black: #000;
 }
+
 body {
+  font-family: Oswald, monospace;
   margin: 0;
 }
+
 button {
   border: none;
 }
-input {
+
+input,
+.drop-btn {
   border: none;
+  border-radius: 3.1px;
+  color: grey;
   font-family: Oswald, sans-serif;
   margin-top: 5px;
-  padding: 5px;
+  padding: 5px 10px;
   margin-right: 10px;
+  text-align: left;
+  width: 200px;
 }
 
 h4 {
   font-family: Oswald;
-  font-size: 2.5rem;
+  font-size: 2em;
   font-weight: bolder;
   letter-spacing: 2px;
 }
@@ -35,6 +44,8 @@ label {
 .book-btn,
 .search-btn,
 .tour-btn {
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px #0E0E0E;
   display: inline-block;
   font-family: Oswald, sans-serif;
   font-size: 1.2rem;
@@ -42,53 +53,62 @@ label {
   letter-spacing: 1px;
   margin-left: auto;
   padding: 5px 25px 7px;
+  transition: color, background-color;
+  transition-duration: 600ms;
 }
+
 .search-btn {
-  background-color: #A7C09B;
+  background-color: #BACE7A;
   color: white;
   margin-top: 20px;
 }
+
 .search-btn:hover {
   background-color: #C7C9D1;
   color: #334147;
   cursor: pointer;
 }
+
 .tour-btn {
   background-color: #334147;
+  border-radius: 5px;
   color: white;
   cursor: pointer;
   margin: 5px 0;
 }
+
 .tour-btn:hover {
-  background-color: #A7C09B;
-  color: white;
+  background-color: #BACE7A;
+  box-shadow: 5px 5px 10px #000;
+  color: #334147;
 }
 
 .book-btn {
-  background-color: #A7C09B;
+  background-color: #BACE7A;
+  border-radius: 5px;
   color: white;
   cursor: pointer;
   margin: 5px 0;
+  padding: .19em 1.25em;
 }
-.book-btn {
-  background-color: #334147;
-}
+
 .book-btn:hover {
-  background-color: #A7C09B;
-  color: white;
+  background-color: #334147;
+  box-shadow: none;
+  color: #fff;
 }
+
 .drop-btn {
-  font-family: Oswald, sans-serif;
-  margin-top: 5px;
-  padding: 5px;
+  width: 220px;
 }
 
 /*Navbar*/
 .navigation {
   align-items: center;
+  background-color: rgba(14, 14, 14, .85);
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px;
+  padding: .35em 50px;
 }
 
 .logo-div {
@@ -96,9 +116,11 @@ label {
   justify-content: center;
   padding-top: 10px;
 }
+
 .navLogo {
   height: 4em;
 }
+
 .logo {
   /*the Cycle Hostel logo in Navbar*/
   color: white;
@@ -113,111 +135,84 @@ label {
   padding-right: 5px;
 }
 
-.navbar-links {
-  display: flex;
-  justify-content: center;
-}
-.navbar-links li{
+.nav-links-div a {
   color: white;
-  font-family: Oswald, sans-serif;
   font-size: 1em;
-  font-weight: 600;
-  letter-spacing: 2px;
-  list-style-type: none;
-  opacity: .8;
-  padding-right: 50px;
-}
-.nav-link-effect {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-/* Mobile Navbar */
-.nav {
-  background-color: var(--white);
-  padding: 10px 20px;
-  position: relative;
-}
-.nav-logo {
-  height: 4em;
-  padding: 20px 0;
-}
-.nav-logo-div {
-  text-align: center;
-}
-.nav-links {
-  display: none;
-  padding-bottom: 20px;
-  text-align: center;
-}
-.nav-links a {
-  color: var(--white);
-  display: block;
-  font-size: 1rem;
-  padding: 10px 0;
+  font-weight: 300;
+  opacity: .5;
+  padding: 0 .5em;
   text-decoration: none;
-}
-.nav-links a:hover {
-  background-color: var(--white);
-  color: var(--black);
-  text-decoration: underline;
-}
-.nav-links a:active {
-  background-color: var(--white);
-}
-/* Div for Hamburger Menu Links */
-.links-div {
-  /* this is to keep it center aligned with logo */
-  position: absolute;
-  text-align: right;
-  top: 40px;
-  right: 20px;
+  transition: color, opacity, font-size;
+  transition-duration: 500ms;
 }
 
+.nav-links-div a:hover {
+  color: #BACE7A;
+  font-size: 1.25em;
+  opacity: 1;
+}
 
-/*Hero Content*/
-/*the Hero Background Image*/
-.Hero {
-  background: url("images/shane-rounce-landing-med1.jpg") no-repeat center fixed;
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*hero Content*/
+/*the hero Background Image*/
+.landing-section {
+  height: 100vh;
+}
+
+.hero {
+  background: url("images/hero1.jpg") no-repeat center fixed;
   background-size: cover;
   border-bottom: 10px solid white;
+  position: relative;
+  height: 100vh;
   width: 100%;
+  transition: background .8s linear;
 }
 
+
+
 .hero-text-container {
+  margin: 4em 0 0 3em;
   text-align: center;
 }
 
 .hero-title {
-  color: #A7C09B;
+  color: #fff;
   display: inline-block;
   font-family: American Captain;
-  font-size: 7rem;
+  font-size: 6em;
   letter-spacing: 2px;
-  margin: 60px 0 10px;
+  margin: 0;
 }
 
 .hero-title:hover {
   color: white;
-  cursor: pointer;
 }
 
 .tagline-text1 {
   color: white;
   margin: 0;
-  padding-bottom: 20px;
+  padding: 0;
 }
 
+.subheading {
+  color: #BACE7A;
+  font-size: 2em;
+  margin: .5em 0 1em;
+}
 
 /* Social */
-.social {
-  /* position: absolute;
-  bottom: 0; */
+.social-section {
+  bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px 20px;
-  ;
+  /* position: absolute; */
 }
 
 .fab {
@@ -229,6 +224,11 @@ label {
 .fab:hover {
   cursor: pointer;
   color: white;
+}
+
+.phone-div {
+  bottom: 2em;
+  position: absolute;
 }
 
 .phone1 {
@@ -254,24 +254,31 @@ label {
 
 .social-icons {
   /*container for the three fab icons*/
+  bottom: 1em;
   color: lightgrey;
   display: block;
   font-size: 2rem;
   padding-top: 20px;
-}
-.social-icons i:hover {
-  color: #A7C09B;
-  font-size: 2.5rem;
+  position: absolute;
+  right: 1em;
 }
 
 .social-icons i {
   color: white;
+  transition: color, font-size;
+  transition-duration: 500ms;
+}
+
+.social-icons i:hover {
+  color: #BACE7A;
+  font-size: 2.5rem;
 }
 
 /*Amenities Section */
 .amenities-section {
   padding: 2rem 1.5rem;
 }
+
 .amenities-heading,
 .amenities-text,
 .amenities-subheadings,
@@ -282,41 +289,48 @@ label {
   letter-spacing: 2px;
   text-align: center;
 }
+
 .amenities-heading {
   font-weight: bold;
 }
+
 .amenities-subheadings {
   font-weight: 600;
 }
+
 .amenities-item {
   text-align: center;
 }
+
 .amenities-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px 0;
 }
+
 .amenities-icons {
-  color:  #334147;
+  color: #334147;
   font-size: 2.5rem;
 }
-.amenities-text {
-font-size: 1rem;
-opacity: .8;
-}
 
+.amenities-text {
+  font-size: 1rem;
+  opacity: .8;
+}
 
 /*Bookings*/
 .bookings {
   background-color: #334147;
   border-bottom: 10px solid white;
 }
+
 .bookings-heading {
-  color: #A7C09B;
+  color: #BACE7A;
   font-size: 1.5rem;
   text-align: left;
 }
+
 .booking-container {
   display: flex;
   flex-direction: column;
@@ -324,38 +338,41 @@ opacity: .8;
   align-items: flex-start;
   padding: 0 50px;
 }
+
 .upper-booking-container {
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
 
-
 /* Contact-Footer */
 .contact-footer {
   align-items: center;
-  background-color: #A7C09B;
+  background-color: #BACE7A;
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
 }
+
 .contact-item p {
   color: #334147;
   font-family: Oswald, sans-serif;
   font-size: 1rem;
   font-weight: 500;
 }
+
 .contact-item i {
   color: white;
 }
+
 .contact-item i:hover {
   color: #334147;
 }
+
 .contact-item span {
   color: #334147;
   font-size: .8rem;
 }
-
 
 /* Container for drop-btn, dropdown-content, and labels */
 .dropdown {
@@ -394,14 +411,6 @@ opacity: .8;
 .dropdown-item:hover {
   background-color: white;
   text-decoration: underline;
-}
-
-/* Styling for all Buttons in form */
-.form-control, .drop-btn {
-  border-radius: 25px;
-  color: grey;
-  text-align: left;
-  width: 200px;
 }
 
 /* Arrival and Departure Button Styling */
