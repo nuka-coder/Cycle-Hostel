@@ -114,9 +114,7 @@ label {
 }
 
 .book-btn:hover {
-  background-color: #334147;
   box-shadow: none;
-  color: #fff;
 }
 
 .drop-btn {
@@ -530,6 +528,15 @@ label {
 /* Animations */
 
 /* Media Queries */
+
+@media only screen and (max-width: 850px) {
+  .amenities-container {
+    flex-wrap: wrap;
+  }
+  .amenities-item {
+    padding: 1em 2em;
+  }
+}
 
 @media only screen and (max-width: 750px) {
 

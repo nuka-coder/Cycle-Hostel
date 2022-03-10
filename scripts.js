@@ -3,18 +3,27 @@ if ( window.history.replaceState ) {
   window.history.replaceState( null, null, window.location.href );
 }
 
-// mobile menu
-
+// opening mobile menu
 function openMenu() {
-
   var navLinks = $(".mobile-nav-links");
-    $(".mobile-nav-links").slideToggle();
-    $(".mobile-nav-links").css("display", "flex");
+    navLinks.slideToggle();
+    navLinks.css("display", "flex");
 }
 
+// active mouseover effects for all buttons
+ $(".book-btn").on({
+   mouseenter: function() {
+     $(".book-btn").css("background-color", "var(--secondary1)");
+     $(".book-btn").css("color", "var(--white)");
+   },
+   mouseleave: function() {
+     $(".book-btn").css("background-color", "var(--primary1)");
+     $(".book-btn").css("color", "var(--secondary1)");
+   }
+ });
 
 
-// Landing Background switch
+// Landing Background image switch
 var heroImages = [
   "images/hero5.jpg",
   "images/hero2.jpg",
