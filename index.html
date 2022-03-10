@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Cycle Hostel - Your Next Crash Spot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="An upscale hostel and temporary lodging for cyclists, adventurers, and travelers.">
   <meta name="keywords" content="hostel, hotel, travel, cyclists, bicycle, lodging">
   <meta name="robots" content="nofollow" />
@@ -28,7 +29,7 @@
   <section id="Hero" class="hero">
     <!-- Navigation Bar -->
     <header id="header">
-      <nav class="navigation">
+      <nav class="navigation desktop-navigation">
 
       <a href="index.html" style="text-decoration: none;">
         <div class="logo-div">
@@ -55,27 +56,55 @@
         </div>
       </nav>
 
-      <!-- <nav id="mobile-nav" class="mobile-nav">
-        <nav class="nav">
-         <div class="links-div">
-           <a href="#" onmouseover="mobileMenuMouseover();" onmouseleave="mobileMenuMouseleave();" onclick="mobileMenuClick1();" class="menu-icons"> <i class="fas fa-bars menu-icon-1"></i>
-           </a>
-           <a href="#" onmouseover="mobileMenuMouseover();" onmouseleave="mobileMenuMouseleave();" onclick="mobileMenuClick2();" class="menu-icons"> <i class="fas fa-glass-martini-alt menu-icon-2"></i>
-           </a>
-         </div>
-         <div class="nav-logo-div">
-           <a href="#"><img class="nav-logo" src="images/ch-logo.png" alt="Cycle Hostel logo"></a>
-         </div>
-       </nav>
-     </div>
-     <div id="nav-links" class="nav-links">
-       <a href="#Home">Home</a>
-       <a href="#Menu">Menu</a>
-       <a href="#Contact">Contact</a>
-       <a href="#Location">Location</a>
-       <a href="#Reservations">Reservations</a>
-     </div>
-      </nav> -->
+      <!-- mobile navigation -->
+
+      <nav class="navigation mobile-navigation">
+        <div class="mobile-content1">
+
+        <div class="hamburger-icon" onclick="openMenu()">
+          <i class="fas fa-bars menu-icon"></i>
+        </div>
+
+        <div>
+          <a href="index.html" style="text-decoration: none;">
+            <div class="logo-div">
+              <div>
+                <span class="logo-2">CYCLE HOSTEL</span>
+
+              </div>
+
+              <div>
+                <i class="fas fa-bicycle logo"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+        <div class="mobile-content2">
+
+          <div id="mobile-social-icons" class="social-icons">
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-square"></i>
+          </div>
+
+          <div>
+            <button id="mobile-book-btn" class="btn book-btn" type="button" name="button">Book Now</button>
+          </div>
+        </div>
+
+
+      </nav>
+
+      <div id="mobile-nav-links" class="nav-links-div mobile-nav-links">
+        <a href="#About">About</a>
+        <a href="#Local Guide">Local Guide</a>
+        <a href="#Rooms">Rooms</a>
+        <a href="#Contact">Contact</a>
+      </div>
+
+
+
 
     </header>
 
@@ -205,7 +234,7 @@
       </div>
 
       <div class="booking-img">
-        <img src="images/tessa-rampersad-sm.jpg" alt="cyclist riding on mountain road">
+        <img style="display: none;" src="images/tessa-rampersad-sm.jpg" alt="cyclist riding on mountain road">
       </div>
 
     </div>

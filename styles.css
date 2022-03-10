@@ -1,11 +1,15 @@
 :root {
   --white: #fff;
   --black: #000;
+  --primary1: #BACE7A;
+  --secondary1: #334147;
+  --base1: #C7C9D1;
 }
 
 body {
   font-family: Oswald, monospace;
   margin: 0;
+  min-width: fit-content;
 }
 
 button {
@@ -16,20 +20,21 @@ input,
 .drop-btn {
   border: none;
   border-radius: 3.1px;
-  color: grey;
+  color: #C7C9D1;
   font-family: Oswald, sans-serif;
   margin-top: 5px;
-  padding: 5px 10px;
+  padding: .25em .8em;
   margin-right: 10px;
   text-align: left;
-  width: 200px;
+  width: 12.5em;
 }
 
 h4 {
   font-family: Oswald;
   font-size: 2em;
   font-weight: bolder;
-  letter-spacing: 2px;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 label {
@@ -45,51 +50,67 @@ label {
 .search-btn,
 .tour-btn {
   border-radius: 5px;
-  box-shadow: 5px 5px 10px #0E0E0E;
   display: inline-block;
   font-family: Oswald, sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 1px;
-  margin-left: auto;
-  padding: 5px 25px 7px;
+  padding: .35em 1.25em;
   transition: color, background-color;
   transition-duration: 600ms;
 }
 
 .search-btn {
-  background-color: #BACE7A;
-  color: white;
+  background-color: var(--base1);
+  box-shadow: 5px 5px 10px #0E0E0E;
+  color: var(--secondary1);
   margin-top: 20px;
 }
 
 .search-btn:hover {
-  background-color: #C7C9D1;
-  color: #334147;
+  background-color: var(--black);
+  color: var(--base1);
   cursor: pointer;
 }
 
 .tour-btn {
-  background-color: #334147;
+  background-color: #BACE7A;
   border-radius: 5px;
-  color: white;
+  box-shadow: 5px 5px 10px #0E0E0E;
+  color: #334147;
   cursor: pointer;
   margin: 5px 0;
 }
 
 .tour-btn:hover {
-  background-color: #BACE7A;
+  background-color: #334147;
   box-shadow: 5px 5px 10px #000;
-  color: #334147;
+  color: #fff;
 }
 
 .book-btn {
   background-color: #BACE7A;
   border-radius: 5px;
-  color: white;
+  box-shadow: 5px 5px 10px var(--black);
+  color: #334147;
   cursor: pointer;
   margin: 5px 0;
-  padding: .19em 1.25em;
+  opacity: 1;
+  animation-name: entering;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  transition: display;
+  transition-duration: 500ms;
+}
+
+@keyframes entering {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
 }
 
 .book-btn:hover {
@@ -108,7 +129,7 @@ label {
   background-color: rgba(14, 14, 14, .85);
   display: flex;
   justify-content: space-between;
-  padding: .35em 50px;
+  padding: 1em 3em;
 }
 
 .logo-div {
@@ -123,21 +144,21 @@ label {
 
 .logo {
   /*the Cycle Hostel logo in Navbar*/
-  color: white;
+  color: var(--base1);
   font-size: 1.5rem;
 }
 
 .logo-2 {
-  color: white;
+  color: var(--base1);
   font-family: Oswald;
   font-size: 1.2rem;
-  font-weight: bolder;
+  font-weight: normal;
   padding-right: 5px;
 }
 
 .nav-links-div a {
-  color: white;
-  font-size: 1em;
+  color: var(--base1);
+  font-size: 1.25em;
   font-weight: 300;
   opacity: .5;
   padding: 0 .5em;
@@ -148,7 +169,7 @@ label {
 
 .nav-links-div a:hover {
   color: #BACE7A;
-  font-size: 1.25em;
+  font-size: 1.5em;
   opacity: 1;
 }
 
@@ -157,26 +178,105 @@ label {
   justify-content: space-between;
 }
 
+/* mobile navigation */
+
+.mobile-navigation {
+  align-items: center;
+  display: none;
+  justify-content: space-between;
+  padding: 1em 1.5em;
+  position: relative;
+  transition: color;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in;
+}
+
+.mobile-navigation .logo-div {
+  margin-left: 10px;
+  padding-top: 0;
+}
+
+#mobile-social-icons {
+  display: inherit;
+  padding-top: 0;
+  position: static;
+  transition: display;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in;
+}
+
+#mobile-book-btn {
+  margin: 0 0 0 1.25em;
+}
+/* div containign mobile menu links */
+.mobile-nav-links {
+  background-color: rgba(14, 14, 14, .95);
+  top: 50px;
+  left: 0;
+  display: none;
+  height: 90vh;
+  justify-content: space-around;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 1em 1.5em;
+  position: fixed;
+  text-align: center;
+  z-index: 1000;
+}
+
+.mobile-nav-links a {
+  color: var(--white);
+  font-size: 1.5em;
+  display: block;
+  padding: .17em .25em;
+}
+
+.menu-icon {
+  color: var(--base1);
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.mobile-content2 {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* the mobile nav content in the first div pairing */
+  .mobile-content1 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 /*hero Content*/
 /*the hero Background Image*/
 .landing-section {
+  align-items: center;
+  display: flex;
   height: 100vh;
+  justify-content: center;
 }
 
 .hero {
   background: url("images/hero1.jpg") no-repeat center fixed;
   background-size: cover;
-  border-bottom: 10px solid white;
   position: relative;
   height: 100vh;
   width: 100%;
   transition: background .8s linear;
 }
 
-
-
 .hero-text-container {
-  margin: 4em 0 0 3em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
   text-align: center;
 }
 
@@ -186,7 +286,7 @@ label {
   font-family: American Captain;
   font-size: 6em;
   letter-spacing: 2px;
-  margin: 0;
+  margin: 0  0 .25em;
 }
 
 .hero-title:hover {
@@ -195,6 +295,7 @@ label {
 
 .tagline-text1 {
   color: white;
+  font-weight: 500;
   margin: 0;
   padding: 0;
 }
@@ -229,6 +330,9 @@ label {
 .phone-div {
   bottom: 2em;
   position: absolute;
+  transition: opacity;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
 }
 
 .phone1 {
@@ -261,6 +365,9 @@ label {
   padding-top: 20px;
   position: absolute;
   right: 1em;
+  transition: opacity;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
 }
 
 .social-icons i {
@@ -421,11 +528,89 @@ label {
 }
 
 /* Animations */
-/* Media Queries */
-@media screen and (max-width: 990px) and (min-width: 760px) {}
 
-@media screen and (max-width: 780px) {
-  .amenities-container {
-    flex-wrap: wrap;
+/* Media Queries */
+
+@media only screen and (max-width: 750px) {
+
+  .hero-text-container {
+    margin-top: 5em;
+  }
+
+  .hero-title {
+    font-size: 6.5em;
+  }
+  .tagline-text {
+    font-size: 3em;
+  }
+  .subheading {
+    font-size: 2.5em;
+  }
+
+  .desktop-navigation {
+    display: none;
+  }
+  .mobile-navigation {
+    background-color: rgba(14, 14, 14, .95);
+    display: flex;
+    position: fixed;
+    width: -webkit-fill-available;
+  }
+
+  /* hiding ower landing page content when nav menu appears */
+  .phone-div,
+  .social-section .social-icons {
+    opacity: 0;
+  }
+
+}
+
+@media only screen and (max-width: 650px) {
+  .book-btn {
+    display: none;
+}
+}
+
+@media only screen and (max-width: 550px) {
+  .hero-title {
+    font-size: 5.5em;
+  }
+  .subheading {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-height: 550px) {
+  .navigation {
+    padding: .5em 3em;
+  }
+  .hero-tex-container {
+    justify-content: flex-start;
+  }
+  #Hero {
+    padding-bottom: 10em;
+  }
+  .social-icons {
+    bottom: 2em;
+  }
+  .phone-div {
+    bottom: 3em;
+  }
+  .subheading {
+    margin: .25em 0 .5em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #mobile-social-icons {
+    display: none;
+  }
+  .mobile-navigation .logo-div {
+    position: absolute;
+    right: 1em;
+    top: .6em;
+  }
+  .mobile-navigation  .logo-2 {
+    font-size: 1rem;
   }
 }
