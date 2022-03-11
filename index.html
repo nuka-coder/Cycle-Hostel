@@ -181,17 +181,21 @@
     </div>
   </section>
 
-  <section id="Bookings" class="bookings">
+  <section id="Bookings" class="booking-section">
 
-    <div class="upper-booking-container">
 
-      <div>
-        <form class="booking-container" action="index.html" method="get">
-          <div class="form-upper">
+    <div class="booking-container">
+
+
+        <form class="booking-form" action="index.html" method="get">
+
+          <div>
+            <h2 class="bookings-heading"> LET US BE YOUR NEXT CRASH SPOT</h2>
+          </div>
+
             <div>
-              <h2 class="bookings-heading"> LET US BE YOUR NEXT CRASH SPOT</h2>
-            </div>
-            <div class="dropdown">
+              <div class="dropdown">
+
               <label for="destinationLabel">Destination</label> <br>
               <button class="btn drop-btn">Our Locations</button>
 
@@ -214,28 +218,31 @@
                 <a class="dropdown-item" href="#">4+ Adults</a>
               </div>
             </div>
-          </div>
+            <br>
 
-          <div class="form-lower">
             <div class="form-group">
               <label for="arrivalLabel">Arrival</label> <br>
               <input id="arrivalDate" class="form-control calendar" type="date" placeholder="Current Date" name="arrival" value="">
             </div>
 
-            <div class="form-group">
+            <div class="form-group departure-form-item">
               <label for="departureLabel">Departure</label> <br>
               <input class="form-control calendar" type="date" placeholder="Two days from current date" name="departure" value="">
             </div>
-
           </div>
 
-          <div class="form-btn"> <button class="search-btn">Search Beds</button>
-          </div>
+
+            <!-- this button would have to be inside the form for traditional use -->
+            <div class="form-btn"> <button class="search-btn">Search Beds</button>
+            </div>
+
         </form>
-      </div>
 
-      <div class="booking-img">
-        <img style="display: none;" src="images/tessa-rampersad-sm.jpg" alt="cyclist riding on mountain road">
+
+
+
+      <div class="booking-img-div">
+
       </div>
 
     </div>
@@ -249,7 +256,7 @@
     </div>
 
     <div class="contact-item">
-        <span class="logo-2">©CYCLE HOSTEL 2021</span>
+        <span class="logo-2">CYCLE HOSTEL © 2022</span>
     </div>
     <div class="contact-item">
       <i class="fab fa-youtube"></i>
