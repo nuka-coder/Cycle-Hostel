@@ -9,7 +9,7 @@
 body {
   font-family: Oswald, monospace;
   margin: 0;
-  min-width: fit-content;
+  overflow-x: hidden;
 }
 
 button {
@@ -26,7 +26,6 @@ input,
   padding: .25em .8em;
   margin-right: 10px;
   text-align: left;
-  width: 12.5em;
 }
 
 h4 {
@@ -46,6 +45,7 @@ label {
 }
 
 /* Buttons */
+
 .book-btn,
 .search-btn,
 .tour-btn {
@@ -55,7 +55,7 @@ label {
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 1px;
-  padding: .35em 1.25em;
+  padding: .30em 1.25em;
   transition: color, background-color;
   transition-duration: 600ms;
 }
@@ -64,7 +64,8 @@ label {
   background-color: var(--base1);
   box-shadow: 5px 5px 10px #0E0E0E;
   color: var(--secondary1);
-  margin-top: 20px;
+  margin: 10px 10px 10px 0;
+  padding: 5px 1.1em;
 }
 
 .search-btn:hover {
@@ -250,7 +251,9 @@ label {
     flex-direction: row;
     justify-content: space-between;
 }
-/*hero Content*/
+
+/*Hero Content*/
+
 /*the hero Background Image*/
 .landing-section {
   align-items: center;
@@ -425,9 +428,22 @@ label {
 }
 
 /*Bookings*/
-.bookings {
+.booking-section {
   background-color: #334147;
   border-bottom: 10px solid white;
+}
+.booking-container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+.booking-form {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
 }
 
 .bookings-heading {
@@ -435,19 +451,11 @@ label {
   font-size: 1.5rem;
   text-align: left;
 }
-
-.booking-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 0 50px;
-}
-
-.upper-booking-container {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+.booking-img-div {
+  background: url("images/booking-image.jpg") no-repeat right fixed;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
 }
 
 /* Contact-Footer */
@@ -468,15 +476,20 @@ label {
 
 .contact-item i {
   color: white;
+  font-size: 1.5rem;
+  transition: color, font-size;
+  transition-duration: 500ms;
 }
 
+.contact-item i:hover,
 .contact-item i:hover {
   color: #334147;
+  font-size: 2rem;
 }
 
 .contact-item span {
   color: #334147;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 /* Container for drop-btn, dropdown-content, and labels */
@@ -576,6 +589,15 @@ label {
   .book-btn {
     display: none;
 }
+  .booking-img-div {
+    display: none;
+  }
+  .bookings-heading {
+    margin-top: 0;
+  }
+  .departure-form-item {
+    margin-left: 5.65rem;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -605,6 +627,12 @@ label {
   }
   .subheading {
     margin: .25em 0 .5em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .departure-form-item {
+    margin-left: 0;
   }
 }
 
