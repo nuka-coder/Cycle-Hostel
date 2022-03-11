@@ -444,6 +444,8 @@ label {
   flex-direction: column;
   justify-content: center;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .bookings-heading {
@@ -538,7 +540,10 @@ label {
   /*no left padding to keep left aligned with above text*/
 }
 
-/* Animations */
+/* Footer */
+  .contact-location2 {
+    display: none;
+  }
 
 /* Media Queries */
 
@@ -597,6 +602,23 @@ label {
   }
   .departure-form-item {
     margin-left: 5.65rem;
+  }
+  .footer-title {
+    padding-top: 2em;
+  }
+  /* social icons in footer */
+  .contact-socials,
+  .contact-location1 {
+    display: none;
+  }
+  .contact-location2 {
+    display: block;
+  }
+  .contact-footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
