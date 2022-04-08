@@ -5,6 +5,14 @@
   --secondary1: #334147;
   --base1: #C7C9D1;
 }
+@font-face {
+  font-family: 'american_captainregular';
+  src: url('american_captain-webfont.woff2') format('woff2'),
+    url('american_captain-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   font-family: Oswald, monospace;
