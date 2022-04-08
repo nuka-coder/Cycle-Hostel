@@ -32,8 +32,12 @@ var heroImages = [
   "images/hero1.jpg"
 ]
 var imageHero = document.getElementById("Hero");
+var x = window.matchMedia("(min-width: 700px)");
+var y = window.matchMedia("(max-width: 700px)")
 
 var i = 0;
+
+if (x.matches) {
 setInterval(function() {
       imageHero.style.backgroundImage = "url(" + heroImages[i] + ")";
 
@@ -41,4 +45,8 @@ setInterval(function() {
       if (i == heroImages.length) {
         i =  0;
       }
-}, 5000);
+}, 5000)
+}
+else {
+  imageHero.style.backgroundImage = "url(images/hero4.jpg)";
+}
